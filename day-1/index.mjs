@@ -17,4 +17,10 @@ elves = elves.map(elf => {
 })
 .sort((prev, curr) => curr - prev);
 
-console.log(elves.at(0));
+console.log('Elf with most calories is carrying', elves.at(0));
+
+const topThreeCalories = elves
+    .slice(0, 3)
+    .reduce((total, calorie) => total + calorie, 0);
+
+console.log('Top three are carrying', topThreeCalories);
